@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" class="flex justify-between">
+  <span>Películas</span>
+  <button mat-raised-button color="accent">Agregar</button>
+</mat-toolbar>
+<div class="py-2">
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>Search</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+  <mat-divider></mat-divider>
+</div>
+<div class="flex justify-between">
+  <mat-form-field>
+    <mat-label>Filtrar Por</mat-label>
+    <mat-select></mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text">
+  </mat-form-field>
+</div>
+<mat-divider></mat-divider>
+<mat-selection-list [multiple]="false">
+  <mat-list-option>
+    <mat-icon style="color:red;" mat-list-icon>brightness_1</mat-icon>
+    <h3 matLine>Pelicula 1</h3>
+    <p>Fecha de estreno: Fechas</p>
+  </mat-list-option>
+  <mat-list-option>
+    <mat-icon style="color:green;" mat-list-icon>brightness_1</mat-icon>
+    <h3 matLine>Pelicula 2</h3>
+    <p>Fecha de estreno: Fechas</p>
+  </mat-list-option>
+  <mat-list-option>
+    <mat-icon style="color:red;" mat-list-icon>brightness_1</mat-icon>
+    <h3 matLine>Pelicula 3</h3>
+    <p>Fecha de estreno: Fechas</p>
+  </mat-list-option>
+</mat-selection-list>
