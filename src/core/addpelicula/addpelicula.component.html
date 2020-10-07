@@ -1,0 +1,19 @@
+<h2 class="">Nueva Película</h2>
+<div>
+  <mat-form-field>
+    <mat-label>Título</mat-label>
+    <input matNativeControl type="text" [(ngModel)]="nuevaPelicula.titulo" required>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <mat-label>Fecha de estreno</mat-label>
+    <input matInput [matDatepicker]="picker" [max]="maxDate" [(ngModel)]="nuevaPelicula.fecha_estreno" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<button mat-raised-button *ngIf="nuevaPelicula.titulo.length < 3 || nuevaPelicula.titulo.length > 25" disabled>Agregar Pelicula</button>
+<button mat-raised-button *ngIf="!(nuevaPelicula.titulo.length < 3 || nuevaPelicula.titulo.length > 25)" (click)="addPelicula()">Agregar Película</button>
+
+

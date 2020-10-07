@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-
+import { fromPeliculasActions } from "src/core/state/actions/peliculas.actions";
+import { Store } from "@ngrx/store";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,12 @@ export class AppComponent {
   }
 
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
+    this.loadMovies()
+
   }
 
+  loadMovies() {
+
+  }
 }

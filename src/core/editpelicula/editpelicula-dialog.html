@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Confirmación</h1>
+<div mat-dialog-component>
+  <p>¿Está seguro que quiere editar los datos?</p>
+</div>
+<div mat-dialog-actions class="flex justify-between">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button color="primary" [mat-dialog-close]="true" routerLink="/">Aceptar</button>
+</div>

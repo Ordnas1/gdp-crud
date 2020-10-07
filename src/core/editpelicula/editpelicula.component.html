@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="flex justify-between">
+  <span>Información</span>
+  <button mat-raised-button (click)="togglePelicula()">Cambiar estado</button>
+</mat-toolbar>
+<div *ngIf="currentPelicula">
+  <h2>{{currentPelicula.titulo}}</h2>
+  <h3>Estreno {{currentPelicula.fecha_estreno | date}}</h3>
+</div>
+<mat-divider></mat-divider>
+<h4>Editar</h4>
+<div>
+  <mat-form-field>
+    <mat-label>Titulo</mat-label>
+    <input matInput type="text" [(ngModel)]="toUpdatePelicula.titulo">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <mat-label>Fecha de estreno</mat-label>
+    <input matInput [matDatepicker]="picker" [max]="maxDate" [(ngModel)]="toUpdatePelicula.fecha_estreno" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<button mat-raised-button *ngIf="toUpdatePelicula.titulo.length < 3 || toUpdatePelicula.titulo.length > 25" disabled>Actualizar</button>
+<button mat-raised-button *ngIf="!(toUpdatePelicula.titulo.length < 3 || toUpdatePelicula.titulo.length > 25)"(click)="openDialog()">Actualizar</button>
+

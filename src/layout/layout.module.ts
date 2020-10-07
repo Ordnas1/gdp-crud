@@ -6,6 +6,7 @@ import { AsideComponent } from './aside/aside.component';
 
 import { MaterialModule } from "../shared/material/material.module";
 import { IndexContainerComponent } from './index-container/index-container.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { IndexContainerComponent } from './index-container/index-container.compo
     ,
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
