@@ -20,7 +20,7 @@
       "id": 3
     },
     {
-      "titulo": "Hola",
+      "titulo": "Saludos al museo",
       "fecha_estreno": "2020-10-07T14:12:05.867Z",
       "disponible": false,
       "id": "d060d830-56f9-4a91-b20c-527934ddf117"
@@ -54,6 +54,12 @@
       "fecha_estreno": "2002-10-08T05:00:00.000Z",
       "disponible": false,
       "id": "2507600e-a020-4897-9b24-8fbbca2c1484"
+    },
+    {
+      "titulo": "Otra pelicula de prueba",
+      "fecha_estreno": "2020-10-07T16:20:24.484Z",
+      "disponible": false,
+      "id": "8672ee49-fa60-4913-9328-b4f9fb29dabf"
     }
   ]
 }

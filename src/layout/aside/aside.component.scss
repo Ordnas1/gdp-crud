@@ -1,4 +1,4 @@
 mat-sidenav-container {
-  height: calc(100% - 64px * 2);
+  max-height: calc(100% - 64px * 2);
   background-color: whitesmoke;
 }
