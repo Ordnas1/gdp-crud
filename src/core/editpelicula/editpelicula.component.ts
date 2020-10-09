@@ -37,7 +37,7 @@ export class EditpeliculaComponent implements OnInit {
     fecha_estreno: new Date(),
   }
 
-  constructor(private route: ActivatedRoute, private store: Store < AppState >, public api: ApiService, public dialog: MatDialog) {
+  constructor(private route: ActivatedRoute, private store: Store < AppState >, public api: ApiService, public dialog: MatDialog, private router: Router) {
     this.maxDate = new Date()
   }
 
@@ -59,7 +59,11 @@ export class EditpeliculaComponent implements OnInit {
 
     if(this.toUpdatePelicula.titulo.length >= 3 && this.toUpdatePelicula.titulo.length <= 25) {
       this.api.updatePelicula(this.peliculaId,this.toUpdatePelicula ).subscribe(
-        res => {window.location.assign("/")}
+        res => {
+          this.store.dispatch(fromPeliculasActions.loadPeliculas());
+          this.router.navigate([`/${this.peliculaId}`])
+        }
+
       )
     } else {
       console.log("error")
@@ -72,7 +76,7 @@ export class EditpeliculaComponent implements OnInit {
     this.currentPelicula.disponible = !this.currentPelicula.disponible
     console.log(this.currentPelicula.disponible)
     this.api.updatePelicula(this.peliculaId, this.currentPelicula).subscribe(
-      res => window.location.assign("/")
+      res => this.router.navigate([`/${this.peliculaId}`])
     )
   }
 

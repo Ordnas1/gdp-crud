@@ -1,65 +1,34 @@
 {
   "peliculas": [
     {
-      "titulo": "La primera pelicula",
-      "fecha_estreno": "2020-10-07T04:58:57.500Z",
-      "disponible": true,
-      "id": 1
-    },
-    {
-      "titulo": "Arañas 2",
-      "fecha_estreno": "2020-10-07T15:44:00.619Z",
-      "disponible": true,
-      "id": 2
-    },
-    {
-      "titulo": "una prueba mas",
-      "fecha_estreno": "2020-09-03T05:00:00.000Z",
-      "disponible": false,
-      "uuid": "8ef70e9a-85cf-4b51-a8ea-4e74d2ee0f7f",
-      "id": 3
-    },
-    {
-      "titulo": "Saludos al museo",
+      "titulo": "Saludos",
       "fecha_estreno": "2020-10-07T14:12:05.867Z",
       "disponible": false,
       "id": "d060d830-56f9-4a91-b20c-527934ddf117"
     },
     {
-      "titulo": "peleas 1",
-      "fecha_estreno": "2020-10-01T05:00:00.000Z",
-      "disponible": true,
-      "id": "ab8b49c2-ce5e-4700-aa3b-f644c83107dc"
-    },
-    {
-      "titulo": "Hormigas 25",
-      "fecha_estreno": "1997-01-01T05:00:00.000Z",
-      "disponible": true,
-      "id": "52a586d8-96f5-49e4-a33a-558977a3ec90"
-    },
-    {
-      "titulo": "Pelicula 5",
-      "fecha_estreno": "2020-10-07T15:46:31.295Z",
-      "disponible": true,
-      "id": "688d33f0-ab6e-4b58-8867-c9727979a892"
-    },
-    {
-      "titulo": "aaa",
-      "fecha_estreno": "2020-10-07T15:57:30.077Z",
-      "disponible": true,
-      "id": "0c067f49-9912-4fda-b31b-e41d0d227dd2"
-    },
-    {
-      "titulo": "La Segunda Pelicula",
-      "fecha_estreno": "2002-10-08T05:00:00.000Z",
+      "titulo": "eeedd",
+      "fecha_estreno": "2020-10-09T17:34:26.995Z",
       "disponible": false,
-      "id": "2507600e-a020-4897-9b24-8fbbca2c1484"
+      "id": "3763d1f2-ac65-4d0d-96c2-cdee8332b533"
     },
     {
-      "titulo": "Otra pelicula de prueba",
-      "fecha_estreno": "2020-10-07T16:20:24.484Z",
+      "titulo": "editado",
+      "fecha_estreno": "2020-10-09T18:15:21.703Z",
       "disponible": false,
-      "id": "8672ee49-fa60-4913-9328-b4f9fb29dabf"
+      "id": "e26cbf09-809d-489a-875d-60143ad481d2"
+    },
+    {
+      "titulo": "seees",
+      "fecha_estreno": "2020-10-09T20:33:57.577Z",
+      "disponible": false,
+      "id": "9e5fc9f5-d765-410e-8dc8-c2b4d01fbd03"
+    },
+    {
+      "titulo": "Otro ejemplo",
+      "fecha_estreno": "2020-10-09T20:34:01.898Z",
+      "disponible": false,
+      "id": "1f4ff059-0c3e-479a-86db-66a4eedf3acd"
     }
   ]
 }

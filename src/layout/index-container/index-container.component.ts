@@ -23,11 +23,13 @@ export class IndexContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadItems()
+  }
+
+  loadItems(): void {
     this.store.dispatch(fromPeliculasActions.loadPeliculas())
     this.items = this.store.select(getAllPeliculas)
   }
-
-
 
 
 }

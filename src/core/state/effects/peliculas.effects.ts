@@ -27,7 +27,7 @@ export class PeliculasEffects {
     this.actions$.pipe(
       ofType(fromPeliculasActions.createPelicula),
       concatMap((action) => this.service.createPelicula(action.pelicula)),
-      tap(() => this.router.navigateByUrl('/'))
+      tap((pelicula) => this.router.navigateByUrl(`/${pelicula.id}`))
     ),
     {dispatch: false}
   );
