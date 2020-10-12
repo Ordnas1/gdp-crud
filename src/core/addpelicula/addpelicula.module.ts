@@ -4,7 +4,7 @@ import { AddpeliculaComponent } from './addpelicula.component';
 import { MaterialModule } from "src/shared/material/material.module";
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +14,8 @@ import { RouterModule } from '@angular/router'
     CommonModule,
     MaterialModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports:[
     AddpeliculaComponent

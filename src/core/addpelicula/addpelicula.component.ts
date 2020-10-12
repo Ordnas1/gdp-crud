@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Pelicula } from "src/shared/interfaces/pelicula";
 import { Store } from "@ngrx/store";
 import { fromPeliculasActions } from "src/core/state/actions/peliculas.actions";
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as uuid from "uuid"
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-addpelicula',
@@ -12,18 +12,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./addpelicula.component.scss']
 })
 export class AddpeliculaComponent implements OnInit {
+  addForm: FormGroup
+
   nuevaPelicula: Pelicula = {
     titulo: "",
     fecha_estreno: new Date(),
     disponible: false
   }
   maxDate: Date;
-  constructor(private store: Store<{peliculas: Pelicula}>, private router : Router) {
+  constructor(private store: Store<{peliculas: Pelicula}>, private fb: FormBuilder) {
     this.maxDate = new Date()
    }
 
   ngOnInit(): void {
+    this.addForm = this.fb.group({
+      titulo: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]],
+      fecha_estreno: new Date()
+    })
   }
+
+    onSubmit(form: FormGroup) {
+      console.log(form.value.titulo)
+      console.log(form.value.fecha_estreno)
+      console.log('Valid?', form.valid)
+      this.nuevaPelicula.titulo = this.addForm.value.titulo
+      this.nuevaPelicula.fecha_estreno = this.addForm.value.fecha_estreno
+      this.addPelicula()
+    }
+
 
   addPelicula() {
     let newId = uuid.v4()
