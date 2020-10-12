@@ -7,7 +7,7 @@ import { RouterModule, ActivatedRoute, ParamMap } from '@angular/router';
 import { MaterialModule } from 'src/shared/material/material.module'
 import { MatDialogModule } from "@angular/material/dialog";
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule,
     MatDialogModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ], exports: [
   ]
 })

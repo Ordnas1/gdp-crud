@@ -6,32 +6,42 @@
   <h2>{{currentPelicula.titulo}}</h2>
   <h3>Estreno {{currentPelicula.fecha_estreno | date}}</h3>
 </div>
+
 <mat-divider></mat-divider>
-<h4 class="pl-4 pt-2">Editar</h4>
-<div class="pl-4 pt-2">
-  <mat-form-field>
-    <mat-label>Titulo</mat-label>
-    <input matInput type="text" [(ngModel)]="toUpdatePelicula.titulo">
-  </mat-form-field>
-</div>
-<div class="pl-4 pt-2">
-  <mat-form-field>
-    <mat-label>Fecha de estreno</mat-label>
-    <input matInput [matDatepicker]="picker" [max]="maxDate" [(ngModel)]="toUpdatePelicula.fecha_estreno" required>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-</div>
-<button
-  mat-raised-button
-  *ngIf="toUpdatePelicula.titulo.length < 3 || toUpdatePelicula.titulo.length > 25"
-  disabled
-  class="ml-4 mt-2"
->Actualizar</button>
-<button
-  mat-raised-button
-  *ngIf="!(toUpdatePelicula.titulo.length < 3 || toUpdatePelicula.titulo.length > 25)"
-  (click)="openDialog()"
-  class="ml-4 mt-2"
->Actualizar</button>
+
+<form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm)">
+  <h4 class="pl-4 pt-2">Editar</h4>
+  <div class="pl-4 pt-2">
+    <mat-form-field>
+      <mat-label>Titulo</mat-label>
+      <input matInput type="text" formControlName="titulo">
+    </mat-form-field>
+    <p class="font-light"*ngIf="editForm.controls.titulo.hasError('pattern')">
+      El título solo puede incluir letras, números y espacios.
+    </p>
+    <p class="font-light" *ngIf="editForm.controls.titulo.hasError('minlength')">
+      Escribe algo más largo (3 caracteres min.)
+    </p>
+    <p class="font-light" *ngIf="editForm.controls.titulo.hasError('maxlength')">
+      Escribe algo más corto (25 caracteres max.)
+    </p>
+  </div>
+  <div class="pl-4 pt-2">
+    <mat-form-field>
+      <mat-label>Fecha de estreno</mat-label>
+      <input matInput [matDatepicker]="picker" [max]="maxDate" formControlName="fecha_estreno" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <button
+    mat-raised-button
+    type="button"
+    (click)="openDialog()"
+    class="ml-4 mt-2"
+    [disabled]="!editForm.valid"
+  >Actualizar</button>
+</form>
+
 

@@ -1,8 +1,8 @@
 {
   "peliculas": [
     {
-      "titulo": "Saludos",
-      "fecha_estreno": "2020-10-07T14:12:05.867Z",
+      "titulo": "gsdfsdfe",
+      "fecha_estreno": "2020-10-12T05:00:00.000Z",
       "disponible": false,
       "id": "d060d830-56f9-4a91-b20c-527934ddf117"
     },
@@ -15,19 +15,19 @@
     {
       "titulo": "editado",
       "fecha_estreno": "2020-10-09T18:15:21.703Z",
-      "disponible": false,
+      "disponible": true,
       "id": "e26cbf09-809d-489a-875d-60143ad481d2"
     },
     {
       "titulo": "seees",
       "fecha_estreno": "2020-10-09T20:33:57.577Z",
-      "disponible": false,
+      "disponible": true,
       "id": "9e5fc9f5-d765-410e-8dc8-c2b4d01fbd03"
     },
     {
-      "titulo": "Otro ejemplo",
-      "fecha_estreno": "2020-10-09T20:34:01.898Z",
-      "disponible": false,
+      "titulo": "Otro Ejemplo Editado 2",
+      "fecha_estreno": "1997-01-05T05:00:00.000Z",
+      "disponible": true,
       "id": "1f4ff059-0c3e-479a-86db-66a4eedf3acd"
     },
     {

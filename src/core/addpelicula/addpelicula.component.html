@@ -5,7 +5,17 @@
       <mat-label>Título</mat-label>
       <input matNativeControl type="text" formControlName="titulo" required>
     </mat-form-field>
+    <p class="font-light"*ngIf="addForm.controls.titulo.hasError('pattern')">
+      El título solo puede incluir letras, números y espacios.
+    </p>
+    <p class="font-light" *ngIf="addForm.controls.titulo.hasError('minlength')">
+      Escribe algo más largo (3 caracteres min.)
+    </p>
+    <p class="font-light" *ngIf="addForm.controls.titulo.hasError('maxlength')">
+      Escribe algo más corto (25 caracteres max.)
+    </p>
   </div>
+
   <div>
     <mat-form-field>
       <mat-label>Fecha de estreno</mat-label>

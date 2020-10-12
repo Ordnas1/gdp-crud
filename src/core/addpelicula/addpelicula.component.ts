@@ -26,19 +26,19 @@ export class AddpeliculaComponent implements OnInit {
 
   ngOnInit(): void {
     this.addForm = this.fb.group({
-      titulo: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]],
+      titulo: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern(/^[A-Za-znÑ0-9 _]*[A-Za-znÑ0-9][A-Za-znÑ0-9 _]*$/)]],
       fecha_estreno: new Date()
     })
   }
 
-    onSubmit(form: FormGroup) {
-      console.log(form.value.titulo)
-      console.log(form.value.fecha_estreno)
-      console.log('Valid?', form.valid)
-      this.nuevaPelicula.titulo = this.addForm.value.titulo
-      this.nuevaPelicula.fecha_estreno = this.addForm.value.fecha_estreno
-      this.addPelicula()
-    }
+  onSubmit(form: FormGroup) {
+    console.log(form.value.titulo)
+    console.log(form.value.fecha_estreno)
+    console.log('Valid?', form.valid)
+    this.nuevaPelicula.titulo = this.addForm.value.titulo
+    this.nuevaPelicula.fecha_estreno = this.addForm.value.fecha_estreno
+    this.addPelicula()
+  }
 
 
   addPelicula() {
